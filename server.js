@@ -4,9 +4,9 @@ const { Pool } = require('pg');
 const app = express();
 const pool = new Pool({
   user: 'postgres',
-  host: '3.129.52.27',
+  host: 'nodepsql.cluster-cqwpfanypprv.us-east-2.rds.amazonaws.com',
   database: 'my_database',
-  password: 'Frds@123', // Replace with your PostgreSQL password
+  password: 'Frds1234567890', // Replace with your PostgreSQL password
   port: 5432, // Default PostgreSQL port
 });
 

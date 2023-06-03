@@ -1,9 +1,8 @@
-
 version: '3'
 services:
   web:
-    build: .
-    image: vadakkan01/my-website:11
+    build:
+      context: .
+    image: 358545154813.dkr.ecr.us-east-2.amazonaws.com/mw:latest
     ports:
       - "3040:3040"
-
