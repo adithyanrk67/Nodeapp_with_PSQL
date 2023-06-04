@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Checking Docker installation"
+      - docker version
+
+  build:
+    commands:
+      - echo "Checking Docker Compose installation"
+      - docker-compose version
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Logging in to Amazon ECR
+      - $(aws ecr get-login --no-include-email --region us-east-2)
+      - echo Pushing Docker image to Amazon ECR
+      - docker push 358545154813.dkr.ecr.us-east-2.amazonaws.com/mw:latest
+      - echo Deploying application using Docker Compose
+      - docker-compose up -d

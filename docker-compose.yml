@@ -3,6 +3,6 @@ services:
   web:
     build:
       context: .
-    image: 358545154813.dkr.ecr.us-east-2.amazonaws.com/mw:latest
+    image: 358545154813.dkr.ecr.us-east-2.amazonaws.com/mw
     ports:
       - "3040:3040"
